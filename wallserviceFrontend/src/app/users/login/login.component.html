@@ -1,0 +1,30 @@
+<div class="form-wrapper">
+  <mat-card class="box">
+
+    <mat-card-header>
+      <i class="fa fa-user-circle fa-4x account-icon" aria-hidden="true"></i>
+    </mat-card-header>
+
+    <form class="form" [formGroup]="loginForm" (ngSubmit)="loginForm.valid && onLogInSubmit()" noval>
+      <mat-card-content>
+        
+        <mat-form-field class="field-full-width">
+          <input id="username" matInput formControlName="username" placeholder="Username" />
+          <mat-error>Username can not be blank.</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field-full-width">
+          <input id="password" matInput formControlName="password" placeholder="Password"
+            [type]="hide ? 'password':'text'" />
+          <mat-error>Password can not be blank.</mat-error>
+          <mat-icon matSuffix (click)="hide = !hide">
+            {{hide ? 'visibility' : 'visibility_off'}}
+          </mat-icon>
+        </mat-form-field>
+
+      </mat-card-content>
+      <button mat-stroked-button color="secondary" class="btn-block">Log in</button>
+    </form>
+  </mat-card>
+
+</div>

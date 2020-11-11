@@ -1,1 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+html, body { height: 100%;  }
+body {
+     margin: 0; font-family: 'Times New Roman', Times, serif;
+     background: #fff;
+ }
+
+.snackBar {
+    border: solid 1.5px   #FF6A5C;
+    background-color: white;
+    color: black;
+    display: block;
+}
+
+.snackBar span {
+    margin: auto;
+    text-align: center;
+}
+
+.error-snack-bar {
+    background-color: red;
+}
+
+.error-snack-bar span {
+    margin: auto;
+    text-align: center;
+}
+
+
+.form-wrapper {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.box {
+    margin: auto;
+    padding: 5%;
+    opacity: 1;
+    width: fit-content;
+    opacity: 0.9;
+        border: solid 1.5px  gray;
+          box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+          -moz-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+          -webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+          -o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+          flex: 0 1 calc(23.3% - 22px);
+}
+
+.form-wrapper .form {
+    min-width: 100%;
+    max-width: 300px;
+    width: 100%;
+}
+
+.form-wrapper .field-full-width,
+.form-wrapper .btn-block {
+    width: 100%;
+}
+
+.form-wrapper mat-card-header {
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-weight: 700;
+}
+
+.form-wrapper mat-card-header mat-card-title {
+    font-size: 30px;
+    margin: 0;
+}
+
+.form-wrapper .mat-card {
+    padding: 40px 70px 50px;
+}
+
+.form-wrapper .mat-stroked-button {
+    border: 1px solid currentColor;
+    line-height: 54px;
+    background: #FFF7FA;
+}
+
+.account-icon {
+    color: #585858
+}
+
