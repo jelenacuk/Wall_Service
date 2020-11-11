@@ -6,5 +6,7 @@ import javax.persistence.Entity;
 public class RegisteredUser extends User {
 
 	private static final long serialVersionUID = 1L;
-
+	
+	public RegisteredUser() {
+	}
 }
