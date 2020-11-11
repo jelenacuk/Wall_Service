@@ -1,7 +1,5 @@
 package com.rs.wallserviceBackend.repository;
 
-import java.util.Optional;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -10,5 +8,5 @@ import com.rs.wallserviceBackend.model.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
-	public Optional<User> findOneByUsername(String username);
+	public User findOneByUsername(String username);
 }
