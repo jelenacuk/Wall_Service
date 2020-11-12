@@ -1,0 +1,13 @@
+
+textarea {
+    font-family: 'Arial', Times, serif;
+    font-size: 24px;
+}
+
+.btnWrapper {
+    margin-top: 2%;
+}
+
+.postCreationBtns {
+    margin-right: 2%;
+}
