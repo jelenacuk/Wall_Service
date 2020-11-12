@@ -1,0 +1,8 @@
+.navbar_style{
+    background-color: royalblue;
+    color: white;
+}
+
+.spacer {
+    flex-grow: 1;
+}

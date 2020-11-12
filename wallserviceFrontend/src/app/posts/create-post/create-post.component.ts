@@ -21,7 +21,6 @@ export class CreatePostComponent implements OnInit {
     const dto: NewPostDto = new NewPostDto();
     dto.text = this.text;
     dto.creationDate = new Date();
-    console.log(dto.creationDate);
     this.postService.createPost(dto).subscribe(
       (response => {
         if (response === true) {
