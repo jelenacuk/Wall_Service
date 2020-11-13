@@ -8,11 +8,10 @@ import { RegistrationComponent } from './users/registration/registration.compone
 
 
 const routes: Routes = [
+  {path: '', pathMatch: 'full', redirectTo: '/home'},
   {path: 'home', component: HomepageComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegistrationComponent},
-  {path: 'create-post', component: CreatePostComponent},
-  {path: 'post', component: PostViewComponent},
 ];
 
 @NgModule({
