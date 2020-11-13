@@ -9,10 +9,18 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CreatePostComponent } from './posts/create-post/create-post.component';
+import { NavbarComponent } from './app-common/navbar/navbar.component';
+import { HomepageComponent } from './app-common/homepage/homepage.component';
+import { PostViewComponent } from './posts/post-view/post-view.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CreatePostComponent,
+    NavbarComponent,
+    HomepageComponent,
+    PostViewComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 package com.rs.wallserviceBackend.model;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -22,7 +23,7 @@ public class Post {
 	private RegisteredUser user;
 	
 	@Column
-	private LocalDate creationDate;
+	private LocalDateTime creationDate;
 	
 	@Column
 	private String text;
@@ -34,6 +35,8 @@ public class Post {
 	private Set<Comment> comments;
 	
 	public Post() {
+		this.reviews = new HashSet<Review>();
+		this.comments = new HashSet<Comment>();
 	}
 	
 	public Long getId() {
@@ -54,11 +57,11 @@ public class Post {
 		this.user = user;
 	}
 
-	public LocalDate getCreationDate() {
+	public LocalDateTime getCreationDate() {
 		return creationDate;
 	}
 
-	public void setCreationDate(LocalDate creationDate) {
+	public void setCreationDate(LocalDateTime creationDate) {
 		this.creationDate = creationDate;
 	}
 

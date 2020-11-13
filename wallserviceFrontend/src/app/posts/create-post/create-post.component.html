@@ -1,0 +1,16 @@
+<div>
+    <mat-card class="box">
+
+        <textarea id="post_textarea" placeholder="What are you thinking about?" [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="text">
+        </textarea>
+
+        <div class="btnWrapper">
+            <button class="btn btn-outline-primary postCreationBtns" [disabled]='text === ""'
+                (click)="publishPost()">Publish</button>
+            <button class="btn btn-outline-primary postCreationBtns" [disabled]='text === ""'>Save</button>
+            <button class="btn btn-outline-dark postCreationBtns" [disabled]='text === ""'>Cancel</button>
+        </div>
+
+    </mat-card>
+</div>

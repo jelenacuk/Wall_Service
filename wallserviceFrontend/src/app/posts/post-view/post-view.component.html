@@ -1,0 +1,33 @@
+<mat-card class="box" style="margin-top: 5%; min-width: 60%;">
+
+    <div class="row">
+
+        <!--Username and date-->
+        <div class="col">
+            <h3>{{post.username}}</h3>
+            <div>{{post.creationDate | date: 'dd.MM.yyyy. hh:mm'}}</div>
+        </div>
+        <div class="col"></div>
+
+        <!--Rating stars-->
+        <div class="col">
+            <ul class="list-inline rating-list" *ngFor="let star of stars" style="display: inline-block">
+                <li (click)="countStar(star)" [ngClass]="{'selected': (star <= selectedValue)}">
+                    <i class="fa fa-star fa-2x"></i>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!--Text-->
+    <div class="post_text">
+        <p>{{post.text}}</p>
+    </div>
+
+    <div style="font-size: large;">
+        Rating: {{post.rating}} <br>
+        Comments: 10
+    </div>
+
+</mat-card>
