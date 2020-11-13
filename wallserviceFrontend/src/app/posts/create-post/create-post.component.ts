@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { MatSnackBar } from '@angular/material';
 import { NewPostDto } from 'src/app/dto/new-post-dto';
 import { PostService } from 'src/app/service/post.service';
@@ -10,21 +10,21 @@ import { PostService } from 'src/app/service/post.service';
 })
 export class CreatePostComponent implements OnInit {
 
+  @Output() postCreationEvent = new EventEmitter<NewPostDto>();
   private text: string;
 
-  constructor( private postService: PostService, private snackBar: MatSnackBar) { }
+  constructor(private postService: PostService, private snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }
 
   publishPost() {
-    const dto: NewPostDto = new NewPostDto();
-    dto.text = this.text;
-    dto.creationDate = new Date();
-    this.postService.createPost(dto).subscribe(
+    const newPost: NewPostDto = new NewPostDto(this.text, new Date());
+    this.postService.createPost(newPost).subscribe(
       (response => {
         if (response === true) {
-          this.snackBar.open('Published');
+          this.postCreationEvent.emit(newPost);
+          this.snackBar.open('Successfuly published!');
           this.text = '';
         }
       }),

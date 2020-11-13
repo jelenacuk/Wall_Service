@@ -10,7 +10,7 @@
         </div>
         <div *ngIf="loggedIn">
             <button mat-button (click) = "navigateToHome()"><i class="fa fa-home fa-2x" aria-hidden="true"> </i>&nbsp;Home</button>
-            <button mat-button *ngIf = "role === 'ROLE_REGISTERED'"><i class="fa fa-user fa-2x" aria-hidden="true"> </i>&nbsp;My Profile</button>
+            <button mat-button ><i class="fa fa-user fa-2x" aria-hidden="true"> </i>&nbsp;My Profile</button>
             <button mat-button (click)="onLogOut()"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i>Log Out</button>
         </div>
     </mat-toolbar-row>

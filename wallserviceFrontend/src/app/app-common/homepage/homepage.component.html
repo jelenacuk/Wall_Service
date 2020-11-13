@@ -1,1 +1,15 @@
-<p>homepage works!</p>
+<div>
+    <!--post creation form-->
+    <app-create-post (postCreationEvent)="addPost($event)"></app-create-post>
+
+    <!--list of posts-->
+    <div *ngFor="let post of posts; index as i">
+        <app-post-view [post]=post></app-post-view>
+    </div>
+
+    <!-- Paginator -->
+    <mat-paginator class="paginator" [length]="page.length" [pageIndex]="page.pageIndex" [pageSize]="page.pageSize"
+        [pageSizeOptions]="[3, 4, 5, 6, 7, 8]" (page)="nextPage($event)" showFirstLastButtons>
+    </mat-paginator>
+
+</div>

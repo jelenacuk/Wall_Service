@@ -62,6 +62,8 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
 		.permitAll()
 		.antMatchers(HttpMethod.POST, "/api/auth/login", "/api/auth/registration")
 		.permitAll()
+		.antMatchers(HttpMethod.GET, "/api/posts/")
+		.permitAll()
 		
 		// all other requests need to be authenticated
 		.anyRequest().authenticated().and()
@@ -74,5 +76,6 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
 	public void configure(WebSecurity web) {
 		// TokenAuthenticationFilter will ignore the following
 		web.ignoring().antMatchers(HttpMethod.POST, "/api/auth/login", "/api/auth/registration");
+		web.ignoring().antMatchers(HttpMethod.GET, "/api/auth/posts/");
 	}
 }

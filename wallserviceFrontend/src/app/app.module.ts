@@ -12,13 +12,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { CreatePostComponent } from './posts/create-post/create-post.component';
 import { NavbarComponent } from './app-common/navbar/navbar.component';
 import { HomepageComponent } from './app-common/homepage/homepage.component';
+import { PostViewComponent } from './posts/post-view/post-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreatePostComponent,
     NavbarComponent,
-    HomepageComponent
+    HomepageComponent,
+    PostViewComponent
   ],
   imports: [
     BrowserModule,
